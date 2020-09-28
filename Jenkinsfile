@@ -10,7 +10,7 @@ node() {
         echo "Build time:" + env.BUILD_TIME
     }
     stage('Checkout Self') {
-        git branch: 'master', credentialsId: '', url: repoURL
+        git branch: 'master', credentialsId: '9ba15df1-62fe-4b4d-a7d7-7fb38ec34ebf', url: repoURL
     }
     stage('Cucumber Tests') {
         withMaven(maven: 'maven35') {
