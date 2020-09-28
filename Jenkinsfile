@@ -10,7 +10,7 @@ node() {
         echo "Build time:" + env.BUILD_TIME
     }
     stage('Checkout Self') {
-        git branch: 'master', credentialsId: '9ba15df1-62fe-4b4d-a7d7-7fb38ec34ebf', url: repoURL
+        git branch: 'master', credentialsId: '', url: repoURL
     }
     stage('Cucumber Tests') {
         withMaven(maven: 'maven35') {
@@ -32,7 +32,7 @@ node() {
 		def testExecutionFieldId = 9
 		def testEnvironmentFieldName = "customfield_11805"
 		def projectKey = "WOO"
-		def xrayConnectorId = '251dbe1a-40ef-4145-8d12-6bb6c87fef98'
+		def xrayConnectorId = 'b26a2647-0ea6-4cdb-a6a6-be27698d0110'
 		def info = '''{
 				"fields": {
 					"project": {
